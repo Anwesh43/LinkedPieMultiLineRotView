@@ -43,14 +43,14 @@ fun Canvas.drawMultiLinePieRot(scale : Float, w : Float, h : Float, paint : Pain
     val r : Float = Math.min(w, h) / rFactor
     save()
     translate(w / 2, h / 2)
-    for (j in 0..1) {
+    for (j in 0..(pies-1)) {
         save()
         rotate(gapDeg * j)
         save()
         translate(size * (1 - sf3), 0f)
-        drawArc(RectF(-r, -r, r, r), -gapDeg / 2, gapDeg * sf1, true, paint)
+        drawArc(RectF(-r, -r, r, r), -gapDeg / 2, gapDeg * sf2, true, paint)
         restore()
-        drawLine(0f, 0f, size * sf2, 0f, paint)
+        drawLine(0f, 0f, size * (sf1 - sf3), 0f, paint)
         restore()
     }
     restore()
