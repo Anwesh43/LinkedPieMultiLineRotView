@@ -1,0 +1,3 @@
+include ':piemultilinerotview'
+include ':app'
+rootProject.name = "LinkedPieMultiLineRotView"
