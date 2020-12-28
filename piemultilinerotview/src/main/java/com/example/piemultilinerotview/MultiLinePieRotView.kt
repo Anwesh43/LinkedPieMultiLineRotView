@@ -216,4 +216,13 @@ class MultiLinePieRotView(ctx : Context) : View(ctx) {
             }
         }
     }
+
+    companion object {
+
+        fun create(activity : Activity) : MultiLinePieRotView {
+            val view : MultiLinePieRotView = MultiLinePieRotView(activity)
+            activity.setContentView(view)
+            return view
+        }
+    }
 }
